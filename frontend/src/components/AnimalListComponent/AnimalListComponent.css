@@ -1,0 +1,17 @@
+table {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  font-size: 25px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
