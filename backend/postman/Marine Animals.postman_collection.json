@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "ff34839a-eaed-489b-84c2-408aa2950bf2",
+		"name": "Marine Animals",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26698169"
+	},
+	"item": [
+		{
+			"name": "Create Animal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"common_name\": \"Great White Shark\",\n    \"scientific_name\": \"Carcharodon carcharias\",\n    \"life_expectancy\": 70,\n    \"habitat\": \"Oceans\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/animals",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read All Animals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/animals",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read One Animal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/animals/5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"animals",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Animal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"common_name\": \"Great White Shark\",\n    \"scientific_name\": \"Carcharodon carcharias\",\n    \"life_expectancy\": 100,\n    \"habitat\": \"Coral Reefs\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/animals/5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"animals",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Animal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/animals/5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"animals",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
