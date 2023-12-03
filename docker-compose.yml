@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:8.0.35
+    command: --authentication_policy=caching_sha2_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_DATABASE: marine_animals
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+    ports:
+      - 3308:3306
+    networks:
+      - marine-animals-network
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: marine-animals-backend
+    restart: always
+    ports:
+      - 3333:3333
+    command: ./wait-for.sh db:3306 -- ./startup.sh
+    depends_on:
+      - db
+    networks:
+      - marine-animals-network
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: marine-animals-frontend
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    networks:
+      - marine-animals-network
+networks:
+  marine-animals-network:
+    driver: bridge
