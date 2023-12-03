@@ -1,0 +1,51 @@
+.edit-parent-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.edit-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 55%;
+  border: solid 2px #213547;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.save-edit-btn {
+  padding: 12px 25px;
+  margin-top: 20px;
+  background-color: #213547;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.save-edit-btn:active {
+  transform: scale(0.95);
+}

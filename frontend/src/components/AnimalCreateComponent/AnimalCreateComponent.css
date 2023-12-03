@@ -1,0 +1,51 @@
+.create-parent-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.create-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group label {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 55%;
+  border: solid 2px #213547;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.form-group input::placeholder {
+  font-style: italic;
+  font-size: 17px;
+}
+
+.save-create-btn {
+  padding: 12px 25px;
+  margin-top: 20px;
+  background-color: #213547;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.save-create-btn:active {
+  transform: scale(0.95);
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
